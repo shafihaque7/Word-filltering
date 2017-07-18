@@ -1,0 +1,24 @@
+Files included
+1. banhammer.c // contains the main file
+2. aes.c // contains encryption for hash value, was given  by Darrell.
+3. aes.h // contains the header file for aes.
+4. hash.c // contains the hash method and all the hash table methods.
+5. hash.h // contains the header file for hash.
+6. ll.c // contains the methods for the linked list.
+7. ll.h //contains the header file for ll.c.
+8. words.l //contains the lex file for reading texts.
+9. README //This file
+10. Makefile //contains the make file for this program
+11. bf.h //contains the bloom filter file
+12. badspeak.txt // Gets the bad words.
+13. newspeak.txt // Gets the new words.
+
+This is a program that acts as a censorship for words. To compile the program, type "make". To run the
+program type "./banhammer". You can type in whatever word you want and it will show whether the word is a badspeak or not.
+Type ./banhammer <some.txt to try it with a some text file.
+
+ To enable special character.
+ -s only print the stats.
+ -h to select the specific hash table size.
+ -m to use the move to front rule.
+ -b will not use the move to front rule. Default.
