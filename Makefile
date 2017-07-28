@@ -5,6 +5,9 @@ OBJECTS = banhammer.o aes.o hash.o ll.o lex.yy.o
 .PHONY: all
 all: banhammer
 
+mac: $(OBJECTS)
+	$(CC) $(OBJECTS) -ll -o banhammer
+
 banhammer: $(OBJECTS)
 	$(CC) $(OBJECTS) -lfl -o banhammer
 
