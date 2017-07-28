@@ -12,7 +12,6 @@
 # include <ctype.h>
 
 bool moveToFront = false; // This is off by default. If the user puts the -m case, it enables the move to front.
-
 uint32_t Seeks = 0; // These are the statisitics that are going to be printed.
 double Average = 0; // Counts the average.Calls to linked list divided by the seeks.
 uint32_t Dictionary = 0; // This is number of bad words from bad speak.
@@ -141,27 +140,15 @@ int main(int argc, char *argv[])
 			   }
 			   else
                {
-
 				   words2=realloc(words2,(p+1)*sizeof(char*)); // Reallocates the second hard.
                    char *concatnated = concat(tempCheck->oldspeak,concat(" -> ",tempCheck->newspeak));
 
 				   words2[p] = concatnated;//concat(tempCheck->oldspeak,concat(" -> ",tempCheck->newspeak)); // It puts the concatnated word in words2p.
 				   p++;
-
-
-
-
-
 			   }
 		   }
-
-
 	   }
-
-
     }
-
-
 
 	if (def==0)
     { // This happens when statistics is off.
@@ -228,9 +215,6 @@ int main(int argc, char *argv[])
 				m2++;
 			}
 		}
-
-
-
 		for (int i=m2-1; i>=0;i--)
         {
 			printf("%s\n",wordsReversed2[i]); // Prints the copression.
@@ -238,14 +222,6 @@ int main(int argc, char *argv[])
 		free(wordsReversed);
 		free(wordsReversed2);
 	}
-
-
-
-
-
-
-
-
 	if(def==1) // This happens only when the statistics is on.
     {
 		double doubleCountBFA = countBF(a); // Double so when it prints double.
@@ -267,8 +243,5 @@ int main(int argc, char *argv[])
 	delBF(b);
 	delHT(h);
     freeScanner();
-
-
     return 0;
-
 }
