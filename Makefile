@@ -3,12 +3,12 @@ CFLAGS = -Wall -Wextra -pedantic -g
 OBJECTS = banhammer.o aes.o hash.o ll.o lex.yy.o
 
 .PHONY: all
-all: banhammer
+all: mac
 
 mac: $(OBJECTS)
 	$(CC) $(OBJECTS) -ll -o banhammer
 
-banhammer: $(OBJECTS)
+linux: $(OBJECTS)
 	$(CC) $(OBJECTS) -lfl -o banhammer
 
 aes.o: aes.c
