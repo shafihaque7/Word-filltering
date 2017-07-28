@@ -22,3 +22,5 @@ Type ./banhammer <some.txt to try it with a some text file.
  -h to select the specific hash table size.
  -m to use the move to front rule.
  -b will not use the move to front rule. Default.
+
+ How to run the program video https://youtu.be/G6NEjNvSurs
